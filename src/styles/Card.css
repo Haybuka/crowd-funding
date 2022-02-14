@@ -1,0 +1,47 @@
+.Card{
+    border-radius: 15px;
+    padding: 15px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.156);
+    margin: 20px 0;
+}
+.Card.out-of-stock{
+    opacity: 0.3;
+}
+.Card-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.Card-body{
+    line-height: 27px;
+    color: hsl(0, 0%, 48%);
+}
+
+.Card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.Card-pledge{
+    color: hsl(176, 72%, 28%);
+    font-weight: bold;
+}
+
+.Card-footer_span{
+    font-weight: bold;
+    font-size: 25px;
+}
+.Card-footer_p{
+    display: flex;
+    align-items: center;
+}
+.Card-footer_span+span{
+    margin-left:5px;
+    font-size: 14px;
+    color: hsl(0, 0%, 48%);
+
+}

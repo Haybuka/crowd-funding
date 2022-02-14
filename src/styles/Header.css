@@ -1,0 +1,55 @@
+.Header{
+    height: 500px;
+    background-image: url('../images/image-hero-desktop.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.Header::before{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.408);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+   position: absolute;
+}
+.Header-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   width: 1000px;
+   margin: 0px auto;
+   position: relative;
+   padding: 30px 0;
+   z-index: 3;
+}
+.Header-nav h3{
+    color: #fff;
+}
+
+.Header-nav_item li{
+  display: inline-block;
+  margin: 0 20px;
+  color: #fff;
+  transition: all 0.25s ease-in;
+  cursor: pointer;
+  position: relative;
+}
+
+.Header-nav_item li:after{
+    position: absolute;
+    content: '';
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: #fff;
+    transition: all 0.25s ease-in;
+}
+
+.Header-nav_item li:hover::after{
+    width: 90%;
+
+}

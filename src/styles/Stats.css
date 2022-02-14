@@ -1,0 +1,25 @@
+.Stats{
+        width: 700px;
+        background-color: #fff;
+        transform: translateY(-70px);
+        padding: 20px 40px;
+        margin: 0 auto;
+        border-radius: 15px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.245);
+}
+.Stats h3{
+    font-size: 25px;
+}
+.Stats p{
+    font-size: 14px;
+    color: hsl(0, 0%, 48%);
+}
+.Stats li{
+    border-right: 1px solid hsla(0, 0%, 48%, 0.354);
+    display: inline-block;
+    margin-right: 50px;
+    padding-right: 50px;
+}
+.Stats li:nth-child(3){
+    border: none;
+}
