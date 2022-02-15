@@ -39,3 +39,33 @@ input+aside{
     padding: 0 20px;
     transform: translateY(-5px);
 }
+.Modal-card ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Modal-card li{
+    display: flex;
+    align-items: center;
+}
+
+.Modal-card li h4+p{
+    margin: 0 10px;
+    color: hsl(176, 72%, 28%);
+    font-size: 15px;
+    font-weight: bold;
+}
+.Modal-footer_p{
+    display: flex;
+    align-items: center;
+}
+.Modal-footer_span{
+    font-weight: bold;
+    font-size: 20px;
+}
+.Modal-footer_span+span{
+    margin-left:5px;
+    font-size: 14px;
+    color: hsl(0, 0%, 48%);
+
+}

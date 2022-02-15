@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import {v4 as uuid} from 'uuid'
 import ModalButton from './ModalButton'
 import '../styles/ModalCard.css'
-function ModalCard({name,text,leadText,btnPledge,setLabelOn,id,labelOn,amntLeft,inStock}) {
+function ModalCard({name,text,leadText,btnPledge,setLabelOn,id,labelOn,amntLeft,inStock,pledge}) {
     const [toggleForm,setToggleForm] = useState(false)
     const [input,setInput] = useState('')
   
@@ -31,13 +31,23 @@ function ModalCard({name,text,leadText,btnPledge,setLabelOn,id,labelOn,amntLeft,
       <div className={inStock ? 'Modal-card' : 'Modal-card out-of-stock'}>
               <label className='Modal-default'>
                <input type='radio' name={name} value={leadText} onClick={handleClick}/>
-               {/* checked={labelOn} */}
                <aside>
                  <div >
-                    <h4>{leadText}</h4>
+                    <ul>
+                       <li>
+                          <h4>{leadText}</h4>                 
+                          {pledge > 0 ? ( <p> {`pledge $${pledge} or more`}</p> ) : ''}
+                       </li>
+                       <li>
+                          <p className='Modal-footer_p'> 
+                             <span className='Modal-footer_span'>{amntLeft}</span>
+                             {amntLeft >= 0 ? (  <span> left</span>) : ''}
+                          </p>
+                       </li>
+                    </ul>
                   </div>
                   <div>
-                       <p> {text}.</p>
+                       <p className='text-primary'> {text}.</p>
                   </div>
                
                </aside>
