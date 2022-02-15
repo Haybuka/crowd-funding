@@ -1,0 +1,38 @@
+.Modal{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-30%);
+    z-index: 5;
+}
+.Modal-card_group{
+    margin: 20px 0;
+}
+
+.Modal-top{
+position: relative;
+}
+
+.Modal-top div{
+    position: absolute;
+    top: -20px;
+    right: 0;
+    font-weight: bold;
+}
+/* .open-modal{
+    display: none;
+} */
+
+.close-modal{
+    cursor: pointer;
+    display: none;
+}
+/* .Modal::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+} */

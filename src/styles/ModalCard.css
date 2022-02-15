@@ -1,0 +1,41 @@
+
+.Modal-card{
+    margin: 10px 0;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.156);
+    margin: 20px 0;
+}
+.Modal label{
+    padding: 20px 25px; 
+    cursor: pointer; 
+}
+.Modal-card form{
+  border-top: 1px solid rgba(0, 0, 0, 0.156);
+  padding: 20px ;
+  display: flex;
+  justify-content: space-between;
+}
+.Modal-card form input{
+    border: none;
+    transition: all 0.25s ease-in;
+}
+.Modal-card form input:focus{
+  padding: 0 10px;
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.156);
+}
+.Modal-btn_group{
+    display: flex;
+    align-items: center;
+}
+.Modal-btn_group button{
+    margin: 0 10px;
+}
+.Modal-default{
+    display: flex;
+    align-items: flex-start;
+}
+input+aside{
+    padding: 0 20px;
+    transform: translateY(-5px);
+}

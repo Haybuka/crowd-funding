@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/Button.css'
 function Button(props) {
-    const {backgroundColor,color,text,id,img,src,bookmarked,mark,toggleBookmark} = props
+    const {backgroundColor,color,text,id,img,src,bookmarked,mark,toggleBookmark,modal,handleModal} = props
     const btn = {
         backgroundColor,
         color,

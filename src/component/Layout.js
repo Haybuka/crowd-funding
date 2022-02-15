@@ -33,10 +33,10 @@ function Layout() {
   }
 
   return (
-    <section className='Layout'>
+    <section className='Layout block'>
        <article className='intro-text'>
            <h2>Mastercraft Bamboo Monitor Riser</h2>
-           <p>A beautiful '&' handcrafted monitor stand to reduce neck and eye strain</p>
+           <p className='text-primary'>A beautiful '&' handcrafted monitor stand to reduce neck and eye strain</p>
        </article>
        <aside className='btn-group'>
            {buttonProps.map(button =>(
