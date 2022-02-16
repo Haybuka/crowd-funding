@@ -58,3 +58,12 @@ body{
     padding: 0 30px;
   }
 }
+
+@media screen and (max-width:500px){
+  .text-primary{
+    font-size: 14px;
+  }
+  .block{
+    padding: 30px 20px;
+  }
+}

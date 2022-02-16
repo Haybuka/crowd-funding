@@ -14,7 +14,6 @@
 
 .Card-body{
     line-height: 27px;
-    color: hsl(0, 0%, 48%);
 }
 
 .Card-footer{
@@ -25,8 +24,8 @@
 }
 
 .Card-pledge{
-    color: hsl(176, 72%, 28%);
-    font-weight: bold;
+    color: hsl(176, 50%, 47%);
+    /* font-weight: bold; */
 }
 
 .Card-footer_span{
@@ -42,4 +41,15 @@
     font-size: 14px;
     color: hsl(0, 0%, 48%);
 
+}
+
+@media screen and (max-width:700px){
+    .Card-top,.Card-footer{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .Card-footer_p{
+        margin: 15px 0;
+    }
+    
 }

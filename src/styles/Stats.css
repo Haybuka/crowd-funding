@@ -21,3 +21,27 @@
     margin-right: 20px !important;
     padding-right: 30px !important;
 }
+
+@media screen and (max-width:800px){
+    .Stats li{
+        display: block;
+        text-align: center;
+        border: none;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        position: relative;
+    }
+    .Stats li::after{
+        content: '';
+        width: 25%;
+        height: 2%;
+        background-color: hsla(0, 0%, 48%, 0.354);
+        position: absolute;
+        bottom: 0;
+        left: 47%;
+        transform: translateX(-50%);
+    }
+    .Stats li:nth-child(3):after{
+        background-color: transparent;
+    }
+  }

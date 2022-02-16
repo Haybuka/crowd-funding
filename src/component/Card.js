@@ -14,7 +14,7 @@ function Card({leadText,pledge,text,backgroundColor,color,amntLeft,inStock,modal
              <h3>{leadText}</h3>
              <p className='Card-pledge'>Pledge ${pledge} or more</p>
            </div>
-        <p className='Card-body'>
+        <p className='Card-body text-primary'>
          {text}
         </p>
         <aside className='Card-footer'>

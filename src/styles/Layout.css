@@ -14,3 +14,11 @@
     align-items: center;
     margin: 30px 0;
 }
+@media screen and (max-width:500px){
+    .btn-group{
+        justify-content: center;
+    }
+    .btn-group button{
+        margin: 0 10px;
+    }
+}

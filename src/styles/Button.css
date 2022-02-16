@@ -43,3 +43,15 @@
     background-color: hsl(0, 0%, 48%) !important;
     color: #fff !important;
 }
+
+@media screen and (max-width:500px){
+    .btn-img+p{
+        display: none;
+    }
+    .btn.bookmark{
+        background-color: transparent !important;
+    }
+    .btn.bookmark:hover{
+        box-shadow: none;
+    }
+}

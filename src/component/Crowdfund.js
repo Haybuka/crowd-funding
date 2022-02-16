@@ -85,8 +85,6 @@ function Crowdfund() {
 ]
 
   function updateModalStat(inputValue){
-    let newAmnt = amnt + inputValue
-    console.log(inputValue)
     setStat(stat+=1)
     setAmnt(amnt + 20)
   }
