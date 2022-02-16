@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import ModalCard from './ModalCard'
 import '../styles/Modal.css'
-function Modal({cardDetails,modal,handleModal}) {
+function Modal({cardDetails,modal,handleModal,updateModalStat}) {
     const[labelOn,setLabelOn] = useState(false)
   const modalDetails = [
     {
@@ -18,7 +18,8 @@ function Modal({cardDetails,modal,handleModal}) {
           {value : 10,
             backgroundColor: '#f3f3f3',
             color:"#000",
-            currency : '$'
+            currency : '$',
+            disabled : true
           },
           {value: 'continue',
           backgroundColor: 'hsl(176, 50%, 47%)',
@@ -41,7 +42,7 @@ function Modal({cardDetails,modal,handleModal}) {
       </article>
       <section className='Modal-card_group'>
           {modalDetails.map(modal =>(
-              <ModalCard {...modal} key={modal.id} setLabelOn={setLabelOn} labelOn={labelOn}/>
+              <ModalCard {...modal} key={modal.id} setLabelOn={setLabelOn} labelOn={labelOn} updateModalStat={updateModalStat}/>
           ))}
       </section>
     </section>

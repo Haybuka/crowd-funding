@@ -2,22 +2,31 @@ import React,{useState} from 'react'
 import {v4 as uuid} from 'uuid'
 import ModalButton from './ModalButton'
 import '../styles/ModalCard.css'
-function ModalCard({name,text,leadText,btnPledge,setLabelOn,id,labelOn,amntLeft,inStock,pledge}) {
+function ModalCard({name,text,leadText,btnPledge,setLabelOn,id,labelOn,amntLeft,inStock,pledge,updateModalStat}) {
+
     const [toggleForm,setToggleForm] = useState(false)
     const [input,setInput] = useState('')
   
     function handleChange(e){
-        setInput(e.target.value)
+      setInput(e.target.value)
     }
     function handleClick(e){
-     console.log('clicked', e.target.checked)
      setToggleForm(!toggleForm);
       setLabelOn(!labelOn)
     }
-    let data;
+ 
+    function handleSubmit(e){
+      e.preventDefault()
+      updateModalStat(input)
+      setInput('')
+     setToggleForm(!toggleForm);
+    }
+
     if(inStock && toggleForm){
-      data = <form>
-      <input type="text" value={input} placeholder="Enter your pledge" onChange={(e) => handleChange(e)}/>
+      var data = <form onSubmit={e => handleSubmit(e)}>
+      <input type="text" 
+          value={input} placeholder="Enter your pledge" 
+          onChange={(e) => handleChange(e)} />
       <div className='Modal-btn_group'>
           {btnPledge.map( pledge => (
               <ModalButton {...pledge} key={uuid()}/>
@@ -26,6 +35,7 @@ function ModalCard({name,text,leadText,btnPledge,setLabelOn,id,labelOn,amntLeft,
       </div>
       </form>
     }
+
     return (
     <>
       <div className={inStock ? 'Modal-card' : 'Modal-card out-of-stock'}>
@@ -40,8 +50,9 @@ function ModalCard({name,text,leadText,btnPledge,setLabelOn,id,labelOn,amntLeft,
                        </li>
                        <li>
                           <p className='Modal-footer_p'> 
-                             <span className='Modal-footer_span'>{amntLeft}</span>
-                             {amntLeft >= 0 ? (  <span> left</span>) : ''}
+                            {amntLeft > 0 ? (<> <span className='Modal-footer_span'>{amntLeft}</span>
+                               <span> left</span></>) : ''}
+                            
                           </p>
                        </li>
                     </ul>

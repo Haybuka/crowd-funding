@@ -5,7 +5,10 @@
   margin: 0;
   font-family: 'Poppins',sans-serif;
 }
+body{
+  overflow-x: hidden !important;
 
+}
 .block{
   width: 700px;
     background-color: #fff;
@@ -32,6 +35,7 @@
 }
 main{
   /* position: relative; */
+  /* overflow-x:  hidden !important; */
 }
 .modal-bg::after{
   position: absolute;

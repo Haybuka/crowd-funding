@@ -11,9 +11,13 @@
 .Stats li{
     border-right: 1px solid hsla(0, 0%, 48%, 0.354);
     display: inline-block;
-    margin-right: 50px;
+    margin-right: 30px;
     padding-right: 50px;
 }
 .Stats li:nth-child(3){
     border: none;
+}
+.mr-3{
+    margin-right: 20px !important;
+    padding-right: 30px !important;
 }

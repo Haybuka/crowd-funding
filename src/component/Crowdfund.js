@@ -6,7 +6,9 @@ import Statistics from './Statistics';
 import About from './About';
 import Modal from './Modal';
 function Crowdfund() {
-  const [modal,setModal] = useState(false)
+  const [modal,setModal] = useState(true)
+  let [amnt,setAmnt] = useState(89914)
+  let [stat,setStat] = useState(5007)
   const cardDetails = [
     {
         backgroundColor : 'hsl(176, 50%, 47%)',
@@ -22,7 +24,9 @@ function Crowdfund() {
           {value : 25,
             backgroundColor: '#f3f3f3',
             color:"#000",
-            currency : '$'
+            currency : '$',
+            disabled : true
+
            },
            {value: 'continue',
            backgroundColor: 'hsl(176, 50%, 47%)',
@@ -44,7 +48,9 @@ function Crowdfund() {
         {value : 75,
           backgroundColor: '#f3f3f3',
           color:"#000",
-            currency : '$'
+            currency : '$',
+            disabled : true
+
          },
          {value: 'continue',
          backgroundColor: 'hsl(176, 50%, 47%)',
@@ -66,7 +72,9 @@ function Crowdfund() {
         {value : 200,
           backgroundColor: '#f3f3f3',
           color:"#000",
-            currency : '$'
+            currency : '$',
+            disabled : true
+
          },
          {value: 'continue',
          backgroundColor: 'hsl(176, 50%, 47%)',
@@ -76,6 +84,12 @@ function Crowdfund() {
     }
 ]
 
+  function updateModalStat(inputValue){
+    let newAmnt = amnt + inputValue
+    console.log(inputValue)
+    setStat(stat+=1)
+    setAmnt(amnt + 20)
+  }
   function handleModal(){
     setModal(!modal)
   }
@@ -84,10 +98,10 @@ function Crowdfund() {
       <Header />
       <main className={!modal ? 'modal-bg':''}>
         <Layout/>
-        <Statistics />
+        <Statistics amnt={amnt} stat={stat} />
         <About cardDetails={cardDetails} handleModal={handleModal} modal={modal}/>
       </main>
-      <Modal cardDetails={cardDetails} handleModal={handleModal} modal={modal}/>
+      <Modal cardDetails={cardDetails} handleModal={handleModal} modal={modal} updateModalStat={updateModalStat}/>
     </>
   )
 }
