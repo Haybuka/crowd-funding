@@ -40,28 +40,35 @@ function ModalCard({name,text,leadText,btnPledge,setLabelOn,id,labelOn,amntLeft,
     <>
       <div className={inStock ? 'Modal-card' : 'Modal-card out-of-stock'}>
               <label className='Modal-default'>
-               <input type='radio' name={name} value={leadText} onClick={handleClick}/>
-               <aside>
-                 <div >
-                    <ul>
-                       <li>
-                          <h4>{leadText}</h4>                 
-                          {pledge > 0 ? ( <p> {`pledge $${pledge} or more`}</p> ) : ''}
-                       </li>
-                       <li>
-                          <p className='Modal-footer_p'> 
-                            {amntLeft > 0 ? (<> <span className='Modal-footer_span'>{amntLeft}</span>
-                               <span> left</span></>) : ''}
-                            
-                          </p>
-                       </li>
-                    </ul>
-                  </div>
-                  <div>
-                       <p className='text-primary'> {text}.</p>
-                  </div>
-               
-               </aside>
+                <article>
+                <input type='radio' name={name} value={leadText} onClick={handleClick}/>
+                <aside>
+                   <div className='Modal-heading'>
+                      <ul>
+                         <li>
+                            <h4>{leadText}</h4>                 
+                            {pledge > 0 ? ( <p> {`pledge $${pledge} or more`}</p> ) : ''}
+                         </li>
+                        <li>
+                            <p className='Modal-footer_p'> 
+                              {amntLeft > 0 ? (<> <span className='Modal-footer_span'>{amntLeft}</span>
+                                 <span> left</span></>) : ''}
+                              
+                            </p>
+                         </li>
+                     </ul>
+                   </div>
+                   <div>
+                        <p className='text-primary'> {text}.</p>
+                   </div>
+                 </aside>
+                </article>
+                {/* for responsive */}
+                <span className='Modal-footer_p-sm'> 
+                     <p className='text-primary'> {text}.</p>  
+                     {amntLeft > 0 ? (<> <span className='Modal-footer_span'>{amntLeft}</span>
+                     <span> left</span></>) : ''}
+                </span>
               </label>
               {data}
           </div>

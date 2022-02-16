@@ -33,10 +33,7 @@ body{
 .container{
   position: relative;
 }
-main{
-  /* position: relative; */
-  /* overflow-x:  hidden !important; */
-}
+
 .modal-bg::after{
   position: absolute;
   top: 0;
@@ -50,4 +47,14 @@ main{
 .Modal-card p.text-primary{
    font-size: 14px;
    margin: 10px 0;
+}
+
+@media screen and (max-width:800px){
+  .block{
+    width: auto;
+    overflow-x: hidden !important ;
+  }
+  main{
+    padding: 0 30px;
+  }
 }
