@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import {v4 as uuid} from 'uuid'
 import ModalButton from './ModalButton'
+import Appreciation from './Appreciation'
 import '../styles/ModalCard.css'
 function ModalCard({name,text,leadText,btnPledge,setLabelOn,id,labelOn,amntLeft,inStock,pledge,updateModalStat}) {
 
@@ -16,10 +17,10 @@ function ModalCard({name,text,leadText,btnPledge,setLabelOn,id,labelOn,amntLeft,
     }
  
     function handleSubmit(e){
-      e.preventDefault()
-      updateModalStat(input)
-      setInput('')
-     setToggleForm(!toggleForm);
+      e.preventDefault();
+      updateModalStat(input);
+      setToggleForm(!toggleForm);
+      setInput('');
     }
 
     if(inStock && toggleForm){

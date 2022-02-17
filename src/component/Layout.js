@@ -2,7 +2,8 @@ import React,{useState} from 'react'
 import Button from './Button'
 import '../styles/Layout.css'
 import logo from '../images/icon-bookmark.svg'
-function Layout() {
+import icon from '../images/logo-mastercraft.svg'
+function Layout({handleModal}) {
     const [bookmark,setBookmark] = useState(false);
     const buttonProps =[
         {
@@ -43,9 +44,11 @@ function Layout() {
                <Button 
                {...button} 
                key={button.id} 
+               handleModal={handleModal}
               />
            ))}
        </aside>
+       <img src={icon} className="img-icon" alt="icon"/>
     </section>
   )
 }

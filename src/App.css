@@ -52,7 +52,7 @@ body{
 @media screen and (max-width:800px){
   .block{
     width: auto;
-    overflow-x: hidden !important ;
+    /* overflow-x: hidden !important ; */
   }
   main{
     padding: 0 30px;
