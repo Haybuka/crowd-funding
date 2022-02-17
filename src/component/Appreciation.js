@@ -5,7 +5,7 @@ import '../styles/Appreciation.css'
 function Appreciation({appreciate,setAppreciate,handleModal,modal}) {
     function handleClick(){
         setAppreciate(!appreciate)
-         handleModal(!modal)
+         handleModal(true)
     } 
   return (
     <section className={appreciate ? 'Appreciation':'Appreciation hide-appreciate'}>

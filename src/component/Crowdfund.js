@@ -104,7 +104,7 @@ function Crowdfund({toggle}) {
         <About cardDetails={cardDetails} handleModal={handleModal} modal={modal}  toggle={toggle}/>
       </main>
       <Modal cardDetails={cardDetails} handleModal={handleModal} modal={modal} updateModalStat={updateModalStat} toggle={toggle}/>
-      <Appreciation appreciate={appreciate} setAppreciate={setAppreciate} handleModal={handleModal} modal={modal}/>
+      <Appreciation appreciate={appreciate} setAppreciate={setAppreciate} handleModal={setModal} modal={modal}/>
 
     </>
   )
