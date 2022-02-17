@@ -53,6 +53,9 @@
     width: 90%;
 
 }
+.harmburger,.Header-nav_item-sm{
+    display: none;
+}
 
 @media screen and (max-width:1000px){
     .Header-nav{
@@ -64,5 +67,73 @@
 @media screen and (max-width:800px){
     .Header{
     background-image: url('../images/image-hero-mobile.jpg');
+    height: 300px;
+    }
+
+}
+
+@media screen and (max-width:600px){
+    .Header-nav{
+        /* display: block; */
+    }
+    .Header-nav_item{
+        display: none;
+    }
+    .Header-nav h3{
+        font-size: 30px;
+    }
+    .harmburger{
+        display:block;
+        position: relative;
+        cursor: pointer;
+    }
+    .harmburger span{
+        display: block;
+        background-color: rgb(251, 251, 251);
+        height: 5px;
+        width: 30px;
+        margin: 3px;
+
+    }
+    .Header-nav_item-sm{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+        height: 100%;
+        transform: translateX(-1000px);
+        transition: all 0.35s ease-in;
+    }
+    .Header-nav_item-sm li{
+        margin: 15px 0;
+        cursor: pointer;
+      position: relative;
+    }
+    .Header-nav_item-sm li:after{
+        background-color: #000;
+        position: absolute;
+        content: '';
+        bottom: -10%;
+        left: 50%;
+        transform: translate(-50%,10%);
+        transform-origin: center;
+        width: 0;
+        bottom: 0%;
+        height: 5px;
+        transition: all 0.25s ease-in;
+    }
+    .Header-nav_item-sm li:hover::after{
+        width: 70%;
+    }
+    .hide-nav{
+        transform: translate(0);
+        height: 100vh;
     }
 }

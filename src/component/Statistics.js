@@ -1,9 +1,9 @@
 import React,{useState} from 'react'
 import Slider from './Slider'
 import '../styles/Stats.css'
-function Statistics({amnt,stat}) {
+function Statistics({amnt,stat,toggle}) {
   return (
-    <section className='Stats block'>
+    <section className={toggle ? 'Stats block' : 'Stats block toggle-nav'}>
         <ul >
         <li className={amnt.toString().length > 12 ? 'mr-3' : ''}>
             <h3 > $ {amnt.toLocaleString()}</h3>

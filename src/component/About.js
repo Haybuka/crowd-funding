@@ -1,10 +1,10 @@
 import React from 'react'
 import Card from './Card'
 import '../styles/About.css'
-function About({cardDetails,handleModal,modal}) {
+function About({cardDetails,handleModal,modal,toggle}) {
  
   return (
-    <section className='About block'>
+    <section className={toggle ? 'About block' : 'About block toggle-nav' } id='about'>
       <article>
           <h3 className=''>About Section</h3>
           <p className='About-text text-primary'>

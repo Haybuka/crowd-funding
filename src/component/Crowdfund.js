@@ -5,7 +5,7 @@ import Layout from "../component/Layout";
 import Statistics from './Statistics';
 import About from './About';
 import Modal from './Modal';
-function Crowdfund() {
+function Crowdfund({toggle}) {
   const [modal,setModal] = useState(true)
   let [amnt,setAmnt] = useState(89914)
   let [stat,setStat] = useState(5007)
@@ -93,13 +93,12 @@ function Crowdfund() {
   }
   return (
     <>
-      <Header />
       <main className={!modal ? 'modal-bg':''}>
         <Layout/>
-        <Statistics amnt={amnt} stat={stat} />
-        <About cardDetails={cardDetails} handleModal={handleModal} modal={modal}/>
+        <Statistics amnt={amnt} stat={stat}   toggle={toggle}/>
+        <About cardDetails={cardDetails} handleModal={handleModal} modal={modal}  toggle={toggle}/>
       </main>
-      <Modal cardDetails={cardDetails} handleModal={handleModal} modal={modal} updateModalStat={updateModalStat}/>
+      <Modal cardDetails={cardDetails} handleModal={handleModal} modal={modal} updateModalStat={updateModalStat} toggle={toggle}/>
     </>
   )
 }
