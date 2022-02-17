@@ -14,11 +14,12 @@
     z-index: 20;
     transition: all 0.25s ease-in;
     width: 100%;
+    height: 45%;
 }
 .Appreciation.hide-appreciate{
     display: none;
 }
-.Appreciation p.text-primary{
+.Appreciation p.text-primarys{
     margin: 20px 0 !important;
 }
 .Appreciation button{
