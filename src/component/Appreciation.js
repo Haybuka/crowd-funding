@@ -12,7 +12,7 @@ function Appreciation({appreciate,setAppreciate,handleModal,modal}) {
       <div>
       <img src={check} alt="check mark" />
        <h3>Thanks for your support</h3>
-       <p className='text-primary'>
+       <p className='text-primarys'>
        Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our campaign is completed.
        </p>
        <aside onClick={handleClick}>

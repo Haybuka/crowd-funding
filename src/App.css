@@ -18,7 +18,7 @@ body{
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.245);
 }
 
-.text-primary{
+.text-primary,.text-primarys{
   color: hsl(0, 0%, 48%);
 }
 
@@ -63,10 +63,14 @@ body{
 }
 
 @media screen and (max-width:500px){
-  .text-primary{
+  .text-primary,.text-primarys{
     font-size: 14px;
   }
+ 
   .block{
     padding: 30px 20px;
+  }
+  .Slider{
+    height: 10px;
   }
 }
