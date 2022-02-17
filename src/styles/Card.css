@@ -25,7 +25,7 @@
 
 .Card-pledge{
     color: hsl(176, 50%, 47%);
-    /* font-weight: bold; */
+    margin-top: 10px;
 }
 
 .Card-footer_span{

@@ -113,6 +113,6 @@ input+aside{
 
   @media screen and (max-width:500px){
       .Modal.block{
-          width: auto;
+          width: 390px;
       }
   }

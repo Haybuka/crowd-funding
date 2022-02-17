@@ -55,7 +55,7 @@ body{
     /* overflow-x: hidden !important ; */
   }
   main{
-    padding: 0 30px;
+    padding: 0 10px;
   }
   .toggle-nav{
     display: none;
